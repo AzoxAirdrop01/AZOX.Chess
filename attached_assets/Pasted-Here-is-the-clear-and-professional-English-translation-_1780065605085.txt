@@ -1,0 +1,22 @@
+Here is the clear and professional English translation of your feedback and modifications, structured point by point so you can easily share it with your development team or use it in your project documentation:
+## Game Modifications & Bug Fixes
+### 1. Landing Page Design (UI/UX)
+ * **Request:** Add the name **"Chess"** to the main/first page.
+ * **Design Element:** Include some 3D/2D chess piece models as a design background/element so users can immediately recognize what the game is about.
+### 2. Piece Customization (Cultural Adaptation)
+ * **Request:** Remove the cross symbol from the top of the **King** and the **Bishop** pieces.
+ * **Replacement:** Replace the cross symbols with a **Crescent (الهلال)** symbol to fit a Muslim/Islamic design theme.
+### 3. Match Code Persistence (Session Bug)
+ * **Issue:** Currently, when a user clicks **"Create Match"** and generated a code, exiting and re-entering the browser refreshes the page and generates a completely new code automatically.
+ * **Fix:** Prevent the code from changing automatically on browser reload. Instead, add a manual **"Refresh Code"** button so the user can update the code only when they explicitly want to.
+### 4. Match joining Workflow (UX Optimization)
+ * **Current Issue:** The current flow is too complicated. When Creator hosts a match and sends the code, both the Creator and the Guest are forced to click "Join Match" and enter the same code to start.
+ * **New Flow:**
+   * **Host/Creator:** Clicks **"Create Match"** \rightarrow Code is generated \rightarrow Creator clicks a new **"Go to Play"** button to enter the game room directly and wait for the opponent.
+   * **Guest/Opponent:** Clicks **"Join Match"** \rightarrow Enters the code \rightarrow Clicks **"Join to Play"** \rightarrow Immediately enters the game room, and the match begins.
+### 5. Turn Timer vs. Match Timer Logic
+ * **Current Issue:** The overall game duration is restricted to 2 minutes.
+ * **Fix:** Change the timing logic. The overall match time should be **unlimited**. Instead, implement a **Turn Timer of 2 minutes per move**. If a player's turn arrives and they do not make a move within 2 minutes, their turn automatically expires, and it becomes the opponent's turn.
+### 6. Score Calculation Discrepancy
+ * **Issue:** There is a contradiction/bug in how the points are being calculated and displayed (as shown in the attached screenshot). This scoring logic needs to be reviewed and fixed.
+*Note: Since I cannot see the image you mentioned in the sixth point, you can simply attach the image alongside this text when sending it to your developer, or describe the scoring error to me and I will translate it for you!*

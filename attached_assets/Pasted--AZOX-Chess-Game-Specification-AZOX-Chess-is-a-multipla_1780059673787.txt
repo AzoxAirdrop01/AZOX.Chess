@@ -1,0 +1,30 @@
+:
+## AZOX Chess - Game Specification
+**AZOX Chess** is a multiplayer and single-player chess game where players can challenge either an AI Agent or other real players.
+### 🎮 Game Modes
+ 1. **Play with AI (Single Player):**
+   * The user plays directly against the computer/AI Agent.
+ 2. **Play Online (Multiplayer):**
+   * This mode allows two players to challenge each other using a peer-to-peer invitation system. Upon clicking this mode, the player is presented with two options:
+     * **Create Match Code:** The system generates a unique, random invitation code. The host player copies this code and sends it to their friend.
+     * **Join Match (Accept Host):** The invited player inputs the shared match code to connect to the host's session and start the game immediately.
+### ⏱️ Turn Timer & Gameplay Rules
+ * **Turn Duration:** Each player has exactly **2 minutes** to make their move.
+ * **Timeout Penalty:** If the timer reaches zero (0:00) and the current player has not made a move, their turn is automatically forfeited, and control passes to the opposing player.
+### 🏆 Points & Rewards System (Airdrop Integration)
+Points are accumulated during the match based on capturing pieces, with a massive bonus awarded for winning the game:
+| Captured Piece | Points Awarded |
+|---|---|
+| **Pawn (جندي)** | +3 Points |
+| **Knight (حصان)** | +5 Points |
+| **Bishop (فيل)** | +5 Points |
+| **Rook (قلعة)** | +5 Points |
+| **Queen (وزير)** | +5 Points |
+| **King (ملك)** | +10 Points |
+| **Match Winner (الفائز)** | **+100 Bonus Points** |
+### 💻 System & Tech Architecture (For Developer)
+ * **Game Logic:** Handled via Chess.js to enforce legal moves, turns, and checkmate conditions.
+ * **Multiplayer Synchronization:** Managed through **WebSockets** (hosted on Railway) to handle real-time match matchmaking codes, move transmissions, and the 2-minute server-side countdown timer.
+ * **3D Visuals:** Handled via your 3D engine, fetching low-poly chess asset GLB models directly from your newly configured **Cloudflare R2** bucket for maximum loading speed.
+
+Use chess.js
